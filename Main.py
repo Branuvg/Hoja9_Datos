@@ -2,6 +2,10 @@
 # Gabriel Bran - 23590
 # Luis Padilla - 23663
 
+import networkx as nx
+import matplotlib.pyplot as plt
+import heapq
+
 # abre el archivo para leerlo
 rutas = {}
 archivo = "rutas.txt"
@@ -28,3 +32,15 @@ def alg_dij(rutas, inicio):
                 rutas_completadas[vecino] = rutas_completadas[node_actual] + [node_actual]
                 heapq.heappush(priority_Queue, (distancia_actualizada, vecino))
     return distancias, rutas_completadas
+
+# Genera la grafica
+def muestra_grafico(rutas):
+    N = nx.Graph()
+    for estacion in rutas.keys():
+        N.add_node(estacion)
+    for salida, destinos in rutas.items():
+        for destino, costo in destinos.items():
+            N.add_edge(salida, destino, weight=costo)
+    nx.draw(N, with_labels=True, node_color="green", node_size=2000)
+    plt.margins(0.1)
+    plt.show()
