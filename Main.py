@@ -64,3 +64,33 @@ def menu():
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
+
+# muestra las opciones de lugares de salidas
+def muestra_salidas():
+    while True:
+        print("Opcion de Rutas: Escribe el nombre de la ruta la cual quisieras saber.")
+        print("- Pueblo Paleta")
+        print("- Aldea Azalea")
+        print("- Ciudad Safiro")
+        print("- Aldea Fuego")
+        print("- Ciudad Lavanda")
+
+        ver = input("Escriba una opcion: ").lower()
+
+        if ver == "pueblo paleta":
+            muestra_rutas(rutas, 'Pueblo Paleta')
+            break
+        elif ver == 'aldea azalea':
+            muestra_rutas(rutas,'Aldea Azalea')
+            break
+        elif ver == 'ciudad safiro':
+            muestra_rutas(rutas,'Ciudad Safiro')
+            break
+        elif ver == 'aldea fuego':
+            muestra_rutas(rutas, 'Aldea Fuego')
+            break
+        elif ver == 'ciudad lavanda':
+            muestra_rutas(rutas, 'Ciudad Lavanda')
+            break
+        else:
+            print("Ruta no econtrada, escribe una ruta valida")
