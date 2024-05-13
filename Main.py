@@ -44,3 +44,23 @@ def muestra_grafico(rutas):
     nx.draw(N, with_labels=True, node_color="green", node_size=2000)
     plt.margins(0.1)
     plt.show()
+
+# Hace el menu para que el usuario pueda ver sus opciones
+def menu():
+    while True:
+        print("Bienvenido al Menu de Rutas para buses")
+        print("1. Mostrar rutas establecidas")
+        print("2. Mostrar grafico")
+        print("3. Salir")
+
+        opcion = input("Seleccione una opcion: ")
+
+        if opcion == '1':
+            muestra_salidas()
+        elif opcion == '2':
+            muestra_grafico(rutas)
+        elif opcion == '3':
+            print("Gracias por utilizar el programa de buses.")
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
