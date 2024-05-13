@@ -14,6 +14,6 @@ Este código implementa el algoritmo de Dijkstra en Python para encontrar la rut
 
 
 # Estructura del proyecto:
-- `ruta_corta.py`: Contiene el código Python.
+- `main.py`: Contiene el código Python.
 - `rutas.txt`: Archivo que contiene las rutas.
 - `README.md`: Este archivo, que proporciona instrucciones de la Hoja
