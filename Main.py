@@ -94,3 +94,17 @@ def muestra_salidas():
             break
         else:
             print("Ruta no econtrada, escribe una ruta valida")
+
+# muestra las rutas disponibles por salidas
+def muestra_rutas(rutas, inicio):
+    distancias, rutas_completas = alg_dij(rutas, inicio)
+    print(f"\nDesde '{inicio}':")
+    for destino, costo in distancias.items():
+        if destino != inicio:
+            if costo < float('inf'):
+                print(f" - Hasta {destino}, Costo: {costo}")
+            else:
+                break
+
+# Ejecucion de todo el programa
+menu()
